@@ -52,8 +52,8 @@ public class GitChangeScannerService {
         if (repoDir.exists() && new File(repoDir, ".git").exists()) {
         	// open existing repo and fetch
         	
-        	String username = "princesinghtalwar";
-			String passwordOrToken = "***REMOVED***";
+        	String username = System.getenv("GITHUB_USER");
+			String passwordOrToken = System.getenv("GITHUB_TOKEN");
 			Git.cloneRepository().setCredentialsProvider(new UsernamePasswordCredentialsProvider(username, passwordOrToken));
             git = Git.open(repoDir);
             try {
