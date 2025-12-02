@@ -53,7 +53,7 @@ public class GitChangeScannerService {
         	// open existing repo and fetch
         	
         	String username = "princesinghtalwar";
-			String passwordOrToken = "passwordOrToken";
+			String passwordOrToken = "***REMOVED***";
 			Git.cloneRepository().setCredentialsProvider(new UsernamePasswordCredentialsProvider(username, passwordOrToken));
             git = Git.open(repoDir);
             try {
